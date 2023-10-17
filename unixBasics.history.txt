@@ -29,7 +29,6 @@
    29  cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt
    30  head all_out_err.txt
    31  sa
-   32  clean
    33  cd ..
    34  ls
    35  ls -l
@@ -90,12 +89,6 @@
    90  head -n 100 sorted.cuffdiff.out > top100.sorte.cuddiff.out
    91  sort -g -r -k10 top100.sorte.cuddiff.out | sort -k 3 | uniq > differentially.expressed.genes.txt
    92  head differentially.expressed.genes.txt
-   93  pwd
-   94  vi first_vi_file.txt
-   95  vi first_vi_file.txt
-   96  vi first_vi_file.txt
-   97  vi first_vi_file.txt
-   98  vi first_vi_file.txt
    99  vi first_vi_file.txt
   100  cd ~
   101  pwd
@@ -106,7 +99,6 @@
   106  ls -a
   107  ls -l
   108  ls -la
-  109  ls -a
   110  ssh-keygen -t ed25519 -C "marijoblancos3@gmail.com"
   111  ls /Users/pfb06/.ssh/
   112  ls /Users/pfb06/.ssh/id_ed25519
