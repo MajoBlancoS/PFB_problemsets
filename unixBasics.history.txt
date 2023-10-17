@@ -1,0 +1,241 @@
+    1  su - admin
+    2  zsh /tmp/miniconda_install.sh
+    3  cd /bin/
+    4  ls
+    5  ls -l
+    6  ls -lt
+    7  ls -lt | head
+    8  date ; sleep 2; date
+    9  cd ~
+   10  curl -O https://raw.githubusercontent.com/prog4biol/pfb2023/master/files/cuffdiff.txt
+   11  man curl
+   12  grp Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   13  grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   14  head fav_chr_cuffdiff.txt
+   15  grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
+   16  tail fav_chr_cuffdiff.txt
+   17  cat blablabla.txt
+   18  cat blablabla.txt 2> errors.txt
+   19  head errors.txt
+   20  cat blablabla.txt > errors.txt
+   21  cat fav_chr_cuffidff.txt blablabla.file > out.txt 2> err.txt
+   22  head out.txt
+   23  head err.txt
+   24  cat fav_chr_cuffidff.txt blablabla.file 1> out.txt 2> err.txt
+   25  head out.txt
+   26  head err.txt
+   27  cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt \n
+   28  head all_out_err.txt
+   29  cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt
+   30  head all_out_err.txt
+   31  sa
+   32  clean
+   33  cd ..
+   34  ls
+   35  ls -l
+   36  cd ~
+   37  mkdir problemsets
+   38  ls
+   39  mkdir problemsets/
+   40  ls
+   41  ls -l
+   42  cd problemsets
+   43  pwd
+   44  wget https://raw.githubusercontent.com/prog4biol/pfb2023/master/files/sequences.nt.fa
+   45  curl -O https://raw.githubusercontent.com/prog4biol/pfb2023/master/files/sequences.nt.fa
+   46  ls -l
+   47  wc sequences.nt.fa
+   48  head sequences.nt.fa
+   49  tail -3 sequences.nt.fa
+   50  grep > sequences.nt.fa
+   51  grep -e > sequences.nt.fa | wc
+   52  grep -e '>' sequences.nt.fa | wc
+   53  grep '>' sequences.nt.fa | wc
+   54  grep > sequences.nt.fa
+   55  grep >NM sequences.nt.fa
+   56  cd
+   57  cd problemsets
+   58  grep >NM sequences.nt.fa| wc
+   59  cd problemsets
+   60  grep '>NM' sequences.nt.fa | wc 
+   61  grep '>NM' sequences.nt.fa | wc -l
+   62  grep '>' sequences.nt.fa | wc -l
+   63  head sequences.nt.fa
+   64  curl -O  https://raw.githubusercontent.com/prog4biol/pfb2023/master/files/sequences.nt.fa
+   65  head sequences.nt.fa
+   66  grep '>' sequences.nt.fa | wc -l
+   67  mv sequences.nt.fa cancer_genes.fasta
+   68  ls
+   69  curl -O https://raw.githubusercontent.com/prog4biol/pfb2023/master/files/cuffdiff.txt
+   70  head cuffdiff.txt
+   71  man sort
+   72  sort -n -k 10 cuffdiff.txt > sorted.cuffdiff.out 
+   73  head sorted.cuffdiff.out
+   74  man head
+   75  head -n 100 sorted.cuffdiff.out > top100.sorte.cuddiff.out
+   76  wc top100.sorte.cuddiff.out
+   77  sort -n -k10 top100.sorte.cuddiff.out | head -n 100
+   78  sort -n -k10 top100.sorte.cuddiff.out | sort -k 3 | uniq > differentially.expressed.genes.txt
+   79  wc differentially.expressed.genes.txt
+   80  head differentially.expressed.genes.txt
+   81  sort -k 3 differentially.expressed.genes.txt | uniq | head
+   82  sort -n -gk 10 cuffdiff.txt > sorted.cuffdiff.out 
+   83  sort -g -k 10 cuffdiff.txt > sorted.cuffdiff.out 
+   84  head sorted.cuffdiff.out
+   85  head -n 100 sorted.cuffdiff.out > top100.sorte.cuddiff.out
+   86  sort -g -k10 top100.sorte.cuddiff.out | sort -k 3 | uniq > differentially.expressed.genes.txt
+   87  head differentially.expressed.genes.txt
+   88  sort -g -r -k 10 cuffdiff.txt > sorted.cuffdiff.out 
+   89  head sorted.cuffdiff.out
+   90  head -n 100 sorted.cuffdiff.out > top100.sorte.cuddiff.out
+   91  sort -g -r -k10 top100.sorte.cuddiff.out | sort -k 3 | uniq > differentially.expressed.genes.txt
+   92  head differentially.expressed.genes.txt
+   93  pwd
+   94  vi first_vi_file.txt
+   95  vi first_vi_file.txt
+   96  vi first_vi_file.txt
+   97  vi first_vi_file.txt
+   98  vi first_vi_file.txt
+   99  vi first_vi_file.txt
+  100  cd ~
+  101  pwd
+  102  mkdir problemsets
+  103  cd problemsets
+  104  ls
+  105  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin https://github.com/MajoBlancoS/PFB_problemsets.git\ngit push -u origin main
+  106  ls -a
+  107  ls -l
+  108  ls -la
+  109  ls -a
+  110  ssh-keygen -t ed25519 -C "marijoblancos3@gmail.com"
+  111  ls /Users/pfb06/.ssh/
+  112  ls /Users/pfb06/.ssh/id_ed25519
+  113  ls ~/ssh
+  114  ls ~/.ssh
+  115  eval "$(ssh-agent -s)"
+  116  open ~/.ssh/config
+  117  touch ~/.ssh/config
+  118  vi ~/.ssh/config
+  119  open ~/.ssh/config
+  120  cat ~/.ssh/config
+  121  cat ~/.ssh/id_ed25519.pub
+  122  git push -u origin main
+  123  git remote add origin git@github.com:MajoBlancoS/PFB_problemsets.git\ngit push -u origin main
+  124  rm -rf .git
+  125  ls -la
+  126  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:MajoBlancoS/PFB_problemsets.git\ngit push -u origin main
+  127  cat ~/.ssh/id_ed25519.pub
+  128  vi git_exercises.txt
+  129  git add git_exercises.txt
+  130  git commit -m 'added a line of text\n'
+  131  git push origin main
+  132  git add git_exercises.txt
+  133  git commit -m 'added a line of text'
+  134  git push origin main
+  135  ls
+  136  cat git_exercises.txt
+  137  git add git_exercises.txt
+  138  git commit -m git_exercises.txt
+  139  git push origin main
+  140  git add git_exercises.txt
+  141  git push origin main
+  142  git pull
+  143  git push
+  144  git add git_exercises.txt
+  145  git commit -m 'added a line of text'
+  146  git push origin main
+  147  git status
+  148  vi .git/hooks/
+  149  cd .git/hooks
+  150  vi pre-commit.txt
+  151  mv pre-commit.txt pre-commit
+  152  ls
+  153  ls -l
+  154  chmod a+x pre-commit
+  155  ls -l
+  156  git add pre-commit
+  157  cd ../..
+  158  git add .git/hooks/pre-commit
+  159  ls -l .git/hooks/pre-commit
+  160  git add .git/hooks/pre-commit
+  161  git push .git/hooks/pre-commit
+  162  git add .git/hooks/pre-commit
+  163  git status
+  164  cd ~
+  165  pwd
+  166  git clone https://github.com/prog4biol/pfb2022.git
+  167  git clone git@github.com:prog4biol/pfb2023.git
+  168  cd problemsets
+  169  ls -l
+  170  git add cancer_genes.fasta
+  171  git commit -m 'moving cancer fasta'
+  172  git push
+  173  git add cuffdiff.txt
+  174  git commit -m 'cuffdiff.txt from UNIX exercises\n'
+  175  git push
+  176  git add differentially.expressed.genes.txt
+  177  got commit -m 'differentially expressed genes by sort UNIX'
+  178  git commit -m 'differentially expressed genes by sort UNIX'
+  179  git push
+  180  git add git_exercises.txt
+  181  git commit -m 'exercise 1 git'
+  182  git add *.out
+  183  git commit -m '*.out'
+  184  git push
+  185  mkdir files
+  186  mv cancer_genes.fasta ./files
+  187  ls files
+  188  git add files/cancer_genes.fasta
+  189  git commit -m 'adding cancer_genes.fasta'
+  190  git push
+  191  vi mysequences.txt
+  192  git add mysequences.txt
+  193  git commit -m 'Problem set 2 output'
+  194  git push
+  195  mkdir fastas
+  196  mv files/cancer_genes.fasta fastas/
+  197  ls -l fastas
+  198  ls -l files
+  199  git pull
+  200  git add fastas/cancer_genes.fasta
+  201  git commit -m 'new directory for fasta files'
+  202  git push
+  203  git rm files/
+  204  git rm -r files/
+  205  git commit -m 'removing files'
+  206  git push
+  207  vi oops.oops
+  208  git add oops.oops
+  209  git commit -m 'oops'
+  210  git push
+  211  git rm -r oops.oops
+  212  git commit -m 'removing oops'
+  213  git push
+  214  vi oops2.oops
+  215  git add oops2.oops
+  216  git commit -m 'commiting oops2\n'
+  217  git push
+  218  rm oops2
+  219  rm oops2.oops
+  220  git add oops2
+  221  git commit -m 'removing oops2'
+  222  git push
+  223  ls -l
+  224  git push
+  225  git rm oops2
+  226  git commit -m 'remove ooops\n'
+  227  vi never.txt
+  228  git add never.txt
+  229  git reset never
+  230  git status
+  231  git restore oops2.oops
+  232  ls -l
+  233  git rm oops2.oops
+  234  git commit -m 'remove oops'
+  235  git push
+  236  man rm
+  237  man cp
+  238  history
+  239  history > unixBasics.history.txt
+  240  cat unixBasics.history.txt
+  241  history 0
