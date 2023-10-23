@@ -20,17 +20,20 @@ if a non ATGCN charcter is found in the sequence"""
 try:
 	file = sys.argv[1]
 	print("User provided file", file)
-	if not file.endswith(['.fa','.nt','.fasta']):
+	if not file.endswith(('.fa','.fasta','.nt')):
 		raise ValueError("Not a FASTA or nt file")
 except IndexError:
 	print("Please provide a file name")
+	exit(1)
 except IOError as ex:
 	print("Cant find file", file, ': ', ex.strerror)
+	exit(2)
 
-
-#TODO LO QUE ESTA AQUI DEBAJO DEBE DE IR DENTRO DE TRY!!!!!!!!
 my_dict ={ }
 string = [ ]
+
+
+
 with open(file,"r") as fasta_read:
 	for line in fasta_read:
 		#print(f'This is a line in the file: {line}')
@@ -45,7 +48,12 @@ with open(file,"r") as fasta_read:
 			#continue
 		else:
 			#print(f'this is sequence: {line}')
-			my_dict[seq_id]['sequence'] += line
+			# Raise exception if a non ATGN character is found in the sequence
+			non_ATGCN_found = re.search(r"[^ATGCN]",line)
+			if non_ATGCN_found:
+				raise ValueError("Non ATGCN character found in the file, please correct file")
+			else:
+				my_dict[seq_id]['sequence'] += line
 #print(f'This is the final dictionary {my_dict}')
 
 #now that I constructed a dictionary within a dictionary saving headers and sequences, I COUNT
