@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os, sys
-
+import math
 from sequence_to_kmer_list import *
 from fastq_file_to_sequence_list import *
 
@@ -44,6 +44,43 @@ def count_kmers(kmer_list):
     ################
 
     return kmer_count_dict
+
+
+def Shan_entropy(kmer):
+    length = len(kmer)
+    countA = kmer.count("A")
+    countC = kmer.count("C")
+    countT = kmer.count("T")
+    countG = kmer.count("G")
+    Shan = 0
+    if countA:
+        f_A = countA/length
+        #print(f"fA {f_A}")
+        log = math.log2(f_A)
+        #print(f"log {log}")
+        HA = (countA * f_A * log)
+        #print(f"HA {HA}") #sanity check
+        Shan += HA
+    if countC:
+        f_C = countC/length
+        log = math.log2(f_C)
+        HC = (countC * f_C * log)
+        #print(f"HC {HC}") #sanity check
+        Shan += HC
+    if countT:
+        f_T = countT/length
+        log = math.log2(f_T)
+        HT = (countT * f_T * log)
+        #print(f"HT {HT}")
+        Shan += HT
+    if countG:
+        f_G = countG/length
+        log = math.log2(f_G)
+        HG = (countG * f_G * log)
+        #print(f"HG {HG}")
+        Shan += HG
+    Shan = -1 * Shan
+    return Shan
 
 
 def main():
@@ -104,8 +141,10 @@ def main():
     top_kmers_show = unique_kmers[0:num_top_kmers_show]
 
     for kmer in top_kmers_show:
-        print("{}: {}".format(kmer, kmer_count_dict[kmer]))
-
+        print("{}: {} {}".format(kmer, kmer_count_dict[kmer],Shan_entropy(kmer)))
+    #sanity check
+    #print(Shan_entropy("TTTTTT"))
+    
     sys.exit(0)  # always good practice to indicate worked ok!
 
 
